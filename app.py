@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import streamlit as st
-from st_aggrid import AgGrid, GridUpdateMode, GridOptionsBuilder, DataReturnMode
+from st_aggrid import AgGrid, GridUpdateMode, GridOptionsBuilder
 
 
 cwd = os.getcwd()
