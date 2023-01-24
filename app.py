@@ -4,7 +4,7 @@ import streamlit as st
 from st_aggrid import AgGrid, GridUpdateMode, GridOptionsBuilder
 
 
-cwd = "https://raw.githubusercontent.com/cagriozmemis/survey/main/"
+cwd = "https://raw.githubusercontent.com/cagriozmemis/survey/blob/main/"
 
 
 st.title("HORIZON GRANT CALLS")
