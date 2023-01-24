@@ -45,7 +45,7 @@ df = pd.DataFrame(selected)
 st.write(df)
 st.write ("")
 ###########################
-
+"""
 file_path = cwd + "cluster2.xlsx"
 cluster2 = pd.read_excel(file_path)
 
@@ -145,19 +145,18 @@ gridoptions6 = gd6.build()
 grid_table6 = AgGrid(cluster6, height=350, gridOptions=gridoptions6,
                     update_mode=GridUpdateMode.SELECTION_CHANGED)
 
-
-
 st.write ("You selected:")
 selected6 = grid_table6['selected_rows']
 df6 = pd.DataFrame(selected6)
 st.write(df6)
 st.write ("")
 
+"""
+
 if st.button('Submit my response'):
     st.write("Thank you for your response! You can close this page now.")
 
 
-# st.selectbox("Please choose the calls that draw your attention",cluster1["Name"])
 
 
 
