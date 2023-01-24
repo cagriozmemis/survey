@@ -25,7 +25,7 @@ faculty = st.selectbox("Your faculty", {"Applied Sciences", "Architecture", "Bus
 ###########################
 
 file_path = os.path.join(cwd,"cluster1.xlsx")
-cluster1 = pd.read_excel("cluster1.xlsx")
+cluster1 = pd.read_excel(file_path)
 
 st.write("Cluster1: Health")
 
