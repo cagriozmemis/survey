@@ -4,7 +4,7 @@ import streamlit as st
 from st_aggrid import AgGrid, GridUpdateMode, GridOptionsBuilder
 
 
-cwd = os.getcwd()
+cwd = "https://raw.githubusercontent.com/cagriozmemis/survey/main/"
 
 
 st.title("HORIZON GRANT CALLS")
@@ -24,7 +24,7 @@ st.write ("")
 faculty = st.selectbox("Your faculty", {"Applied Sciences", "Architecture", "Business", "Engineering", "Law", "Social Sciences"})
 ###########################
 
-file_path = os.path.join(cwd,"cluster1.xlsx")
+file_path = cwd + "cluster1.xlsx"
 cluster1 = pd.read_excel(file_path)
 
 st.write("Cluster1: Health")
@@ -46,7 +46,7 @@ st.write(df)
 st.write ("")
 ###########################
 
-file_path = os.path.join(cwd,"cluster2.xlsx")
+file_path = cwd + "cluster2.xlsx"
 cluster2 = pd.read_excel(file_path)
 
 st.write("Cluster2: Culture, Creativity and Inclusive Society")
@@ -68,7 +68,7 @@ st.write ("")
 
 ###########################
 
-file_path = os.path.join(cwd,"cluster3.xlsx")
+file_path = cwd + "cluster3.xlsx"
 cluster3 = pd.read_excel(file_path)
 
 st.write("Cluster3: Civil Security for Society")
@@ -89,7 +89,7 @@ st.write(df3)
 st.write ("")
 ###########################
 
-file_path = os.path.join(cwd,"cluster4.xlsx")
+file_path = cwd + "cluster4.xlsx"
 cluster4 = pd.read_excel(file_path)
 
 st.write("Cluster4: Digital Industry and Space")
@@ -110,7 +110,7 @@ st.write(df4)
 st.write ("")
 ###########################
 
-file_path = os.path.join(cwd,"cluster5.xlsx")
+file_path = cwd + "cluster5.xlsx"
 cluster5 = pd.read_excel(file_path)
 
 st.write("Cluster5: Climate Energy and Mobility")
@@ -131,7 +131,7 @@ st.write(df5)
 st.write ("")
 ###########################
 
-file_path = os.path.join(cwd,"cluster6.xlsx")
+file_path = cwd + "cluster6.xlsx"
 cluster6 = pd.read_excel(file_path)
 
 st.write("Cluster6: Food, Bioeceonomy, Natural Resources, Agriculture and Environment")
