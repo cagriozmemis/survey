@@ -2,9 +2,8 @@ import os
 import pandas as pd
 import streamlit as st
 from st_aggrid import AgGrid, GridUpdateMode, GridOptionsBuilder
+import requests
 
-
-cwd = "https://github.com/cagriozmemis/survey/blob/main/"
 
 
 st.title("HORIZON GRANT CALLS")
@@ -19,13 +18,14 @@ name = st.text_input("Your name", key="name")
 
 last_name = st.text_input("Your last name", key="last_name")
 
-st.write ("")
-
 faculty = st.selectbox("Your faculty", {"Applied Sciences", "Architecture", "Business", "Engineering", "Law", "Social Sciences"})
-###########################
 
-file_path = cwd + "cluster1.xlsx"
-cluster1 = pd.read_excel(file_path)
+st.write ("")
+###########################
+url = "https://github.com/cagriozmemis/survey/blob/main/cluster1.xlsx"
+response = requests.get(file_url)
+open("cluster1.xlsx", "wb").write(response.content)
+cluster1 = pd.read_excel("cluster1.xlsx")
 
 st.write("Cluster1: Health")
 
