@@ -4,9 +4,12 @@ import streamlit as st
 from st_aggrid import AgGrid, GridUpdateMode, GridOptionsBuilder
 import requests
 
+cwd = os.getcwd()
 
 
 st.title("HORIZON GRANT CALLS")
+
+st.write(cwd)
 
 st.write ("This is an online survey through which you can indicate your interest in specific HORIZON grant calls. There are six clusters in total. Please choose the calls that draw your attention at each cluster. You can choose more than one.")
 
@@ -47,9 +50,8 @@ st.write(df)
 st.write ("")
 ###########################
 """
-#file_path = cwd + "cluster2.xlsx"
-#cluster2 = pd.read_excel(file_path)
-cluster2 = pd.read_excel("main\cluster2.xlsx")
+file_path = os.path.join(cwd,"cluster2.xlsx")
+cluster2 = pd.read_excel(file_path)
 
 st.write("Cluster2: Culture, Creativity and Inclusive Society")
 
@@ -70,7 +72,7 @@ st.write ("")
 
 ###########################
 """
-file_path = cwd + "cluster3.xlsx"
+file_path = os.path.join(cwd,"cluster3.xlsx")
 cluster3 = pd.read_excel(file_path)
 
 st.write("Cluster3: Civil Security for Society")
@@ -91,7 +93,7 @@ st.write(df3)
 st.write ("")
 ###########################
 
-file_path = cwd + "cluster4.xlsx"
+file_path = os.path.join(cwd,"cluster4.xlsx")
 cluster4 = pd.read_excel(file_path)
 
 st.write("Cluster4: Digital Industry and Space")
@@ -112,7 +114,7 @@ st.write(df4)
 st.write ("")
 ###########################
 
-file_path = cwd + "cluster5.xlsx"
+file_path = os.path.join(cwd,"cluster5.xlsx")
 cluster5 = pd.read_excel(file_path)
 
 st.write("Cluster5: Climate Energy and Mobility")
@@ -133,7 +135,7 @@ st.write(df5)
 st.write ("")
 ###########################
 
-file_path = cwd + "cluster6.xlsx"
+file_path = os.path.join(cwd,"cluster6.xlsx")
 cluster6 = pd.read_excel(file_path)
 
 st.write("Cluster6: Food, Bioeceonomy, Natural Resources, Agriculture and Environment")
