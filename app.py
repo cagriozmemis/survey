@@ -23,10 +23,9 @@ faculty = st.selectbox("Your faculty", {"Applied Sciences", "Architecture", "Bus
 st.write ("")
 ###########################
 
-file_url = "https://github.com/cagriozmemis/survey/blob/main/cluster1.xlsx"
-response = requests.get(file_url)
-open("cluster1.xlsx", "wb").write(response.content)
-cluster1 = pd.read_excel("cluster1.xlsx")
+cluster1_url = "https://github.com/cagriozmemis/survey/raw/main/cluster1.xlsx"
+cluster1 = pd.read_excel(cluster1_url)"
+
 
 st.write("Cluster1: Health")
 
