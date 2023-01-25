@@ -9,12 +9,6 @@ cwd = os.getcwd()
 
 st.title("HORIZON GRANT CALLS")
 
-st.write(cwd)
-
-file_path = os.path.join(cwd,"cluster2.xlsx")
-
-st.write(file_path)
-
 st.write ("This is an online survey through which you can indicate your interest in specific HORIZON grant calls. There are six clusters in total. Please choose the calls that draw your attention at each cluster. You can choose more than one.")
 
 st.write ("")
@@ -29,7 +23,7 @@ faculty = st.selectbox("Your faculty", {"Applied Sciences", "Architecture", "Bus
 
 st.write ("")
 ###########################
-"""
+
 file_url = "https://github.com/cagriozmemis/survey/blob/main/cluster1.xlsx"
 response = requests.get(file_url)
 open("cluster1.xlsx", "wb").write(response.content)
@@ -53,7 +47,7 @@ df = pd.DataFrame(selected)
 st.write(df)
 st.write ("")
 ###########################
-"""
+
 file_path = os.path.join(cwd,"cluster2.xlsx")
 cluster2 = pd.read_excel(file_path)
 
