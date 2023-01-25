@@ -6,6 +6,11 @@ import requests
 
 cwd = os.getcwd()
 
+a = [[1,2,3],[4,5,6]]
+
+table = pd.DataFrame(a,columns=["a","b","c"])
+
+st.write(table)
 
 st.title("HORIZON GRANT CALLS")
 
