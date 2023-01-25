@@ -49,7 +49,7 @@ st.write ("")
 """
 #file_path = cwd + "cluster2.xlsx"
 #cluster2 = pd.read_excel(file_path)
-cluster2 = pd.read_excel("cluster2.xlsx")
+cluster2 = pd.read_excel("main\cluster2.xlsx")
 
 st.write("Cluster2: Culture, Creativity and Inclusive Society")
 
