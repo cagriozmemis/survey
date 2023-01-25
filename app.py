@@ -22,6 +22,7 @@ faculty = st.selectbox("Your faculty", {"Applied Sciences", "Architecture", "Bus
 
 st.write ("")
 ###########################
+"""
 file_url = "https://github.com/cagriozmemis/survey/blob/main/cluster1.xlsx"
 response = requests.get(file_url)
 open("cluster1.xlsx", "wb").write(response.content)
@@ -46,8 +47,9 @@ st.write(df)
 st.write ("")
 ###########################
 """
-file_path = cwd + "cluster2.xlsx"
-cluster2 = pd.read_excel(file_path)
+#file_path = cwd + "cluster2.xlsx"
+#cluster2 = pd.read_excel(file_path)
+cluster2 = pd.read_excel("cluster2.xlsx")
 
 st.write("Cluster2: Culture, Creativity and Inclusive Society")
 
@@ -67,7 +69,7 @@ st.write(df2)
 st.write ("")
 
 ###########################
-
+"""
 file_path = cwd + "cluster3.xlsx"
 cluster3 = pd.read_excel(file_path)
 
