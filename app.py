@@ -12,13 +12,13 @@ st.write ("This is an online survey through which you can indicate your interest
 
 st.write ("")
 
-st.write ("Please provide your name and last name")
+st.write ("Please provide your name, last name, and faculty")
 
 name = st.text_input("Your name", key="name")
 
 last_name = st.text_input("Your last name", key="last_name")
 
-faculty = st.selectbox("Your faculty", {"Applied Sciences", "Architecture", "Business", "Engineering", "Law", "Social Sciences"})
+faculty = st.selectbox("Your faculty", {"Architecture and Design", "Aviation and Aeronautical Sciences", "Business", "Engineering", "Law", "Social Sciences"})
 
 st.write ("")
 ###########################
