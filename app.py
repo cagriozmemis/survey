@@ -24,7 +24,7 @@ st.write ("")
 ###########################
 
 cluster1_url = "https://github.com/cagriozmemis/survey/raw/main/cluster1.xlsx"
-cluster1 = pd.read_excel(cluster1_url)"
+cluster1 = pd.read_excel(cluster1_url)
 
 
 st.write("Cluster1: Health")
