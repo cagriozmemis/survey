@@ -4,7 +4,7 @@ import streamlit as st
 from st_aggrid import AgGrid, GridUpdateMode, GridOptionsBuilder
 import requests
 
-cwd = os.getcwd()
+
 
 st.title("HORIZON GRANT CALLS")
 
@@ -26,7 +26,6 @@ st.write ("")
 cluster1_url = "https://github.com/cagriozmemis/survey/raw/main/cluster1.xlsx"
 cluster1 = pd.read_excel(cluster1_url)
 
-
 st.write("Cluster1: Health")
 
 gd = GridOptionsBuilder.from_dataframe(cluster1)
@@ -46,8 +45,8 @@ st.write(df)
 st.write ("")
 ###########################
 
-file_path = os.path.join(cwd,"cluster2.xlsx")
-cluster2 = pd.read_excel(file_path)
+cluster2_url = "https://github.com/cagriozmemis/survey/raw/main/cluster2.xlsx"
+cluster2 = pd.read_excel(cluster2_url)
 
 st.write("Cluster2: Culture, Creativity and Inclusive Society")
 
@@ -67,9 +66,9 @@ st.write(df2)
 st.write ("")
 
 ###########################
-"""
-file_path = os.path.join(cwd,"cluster3.xlsx")
-cluster3 = pd.read_excel(file_path)
+
+cluster3_url = "https://github.com/cagriozmemis/survey/raw/main/cluster3.xlsx"
+cluster3 = pd.read_excel(cluster3_url)
 
 st.write("Cluster3: Civil Security for Society")
 
@@ -89,8 +88,8 @@ st.write(df3)
 st.write ("")
 ###########################
 
-file_path = os.path.join(cwd,"cluster4.xlsx")
-cluster4 = pd.read_excel(file_path)
+cluster4_url = "https://github.com/cagriozmemis/survey/raw/main/cluster4.xlsx"
+cluster4 = pd.read_excel(cluster4_url)
 
 st.write("Cluster4: Digital Industry and Space")
 
@@ -110,8 +109,8 @@ st.write(df4)
 st.write ("")
 ###########################
 
-file_path = os.path.join(cwd,"cluster5.xlsx")
-cluster5 = pd.read_excel(file_path)
+cluster5_url = "https://github.com/cagriozmemis/survey/raw/main/cluster5.xlsx"
+cluster5 = pd.read_excel(cluster5_url)
 
 st.write("Cluster5: Climate Energy and Mobility")
 
@@ -131,8 +130,8 @@ st.write(df5)
 st.write ("")
 ###########################
 
-file_path = os.path.join(cwd,"cluster6.xlsx")
-cluster6 = pd.read_excel(file_path)
+cluster6_url = "https://github.com/cagriozmemis/survey/raw/main/cluster6.xlsx"
+cluster6 = pd.read_excel(cluster6_url)
 
 st.write("Cluster6: Food, Bioeceonomy, Natural Resources, Agriculture and Environment")
 
@@ -151,7 +150,7 @@ df6 = pd.DataFrame(selected6)
 st.write(df6)
 st.write ("")
 
-"""
+
 
 if st.button('Submit my response'):
     st.write("Thank you for your response! You can close this page now.")
