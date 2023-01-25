@@ -11,6 +11,10 @@ st.title("HORIZON GRANT CALLS")
 
 st.write(cwd)
 
+file_path = os.path.join(cwd,"cluster2.xlsx")
+
+st.write(file_path)
+
 st.write ("This is an online survey through which you can indicate your interest in specific HORIZON grant calls. There are six clusters in total. Please choose the calls that draw your attention at each cluster. You can choose more than one.")
 
 st.write ("")
