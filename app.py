@@ -6,12 +6,6 @@ import requests
 
 cwd = os.getcwd()
 
-a = [[1,2,3],[4,5,6]]
-
-table = pd.DataFrame(a,columns=["a","b","c"])
-
-st.write(table)
-
 st.title("HORIZON GRANT CALLS")
 
 st.write ("This is an online survey through which you can indicate your interest in specific HORIZON grant calls. There are six clusters in total. Please choose the calls that draw your attention at each cluster. You can choose more than one.")
