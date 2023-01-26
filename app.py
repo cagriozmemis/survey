@@ -132,6 +132,7 @@ st.write ("")
 
 cluster6_url = "https://github.com/cagriozmemis/survey/raw/main/cluster6.xlsx"
 cluster6 = pd.read_excel(cluster6_url)
+cluster6 = cluster6.iloc[: , :-3]
 
 st.write("Cluster6: Food, Bioeceonomy, Natural Resources, Agriculture and Environment")
 
