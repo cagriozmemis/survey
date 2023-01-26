@@ -114,7 +114,7 @@ cluster5 = pd.read_excel(cluster5_url)
 
 st.write("Cluster5: Climate Energy and Mobility")
 
-gd5 = GridOptionsBuilder.from_dataframe(cluster1)
+gd5 = GridOptionsBuilder.from_dataframe(cluster5)
 
 gd5.configure_selection(selection_mode='multiple', use_checkbox=True)
 
