@@ -154,7 +154,50 @@ st.write ("")
 
 
 if st.button('Submit my response'):
+    
+    main_list = []
+    
+    main_list.append(name)
+    main_list.append(last_name)
+    main_list.append(faculty)
+    
+    chosen = list(df["#"])
+    string_chosen = ",".join(str(e) for e in chosen)
+    main_list.append(string_chosen)
+    
+    chosen = list(df2["#"])
+    string_chosen = ",".join(str(e) for e in chosen)
+    main_list.append(string_chosen)
+    
+    chosen = list(df3["#"])
+    string_chosen = ",".join(str(e) for e in chosen)
+    main_list.append(string_chosen)
+    
+    chosen = list(df4["#"])
+    string_chosen = ",".join(str(e) for e in chosen)
+    main_list.append(string_chosen)
+    
+    chosen = list(df5["#"])
+    string_chosen = ",".join(str(e) for e in chosen)
+    main_list.append(string_chosen)
+    
+    chosen = list(df6["#"])
+    string_chosen = ",".join(str(e) for e in chosen)
+    main_list.append(string_chosen)
+    
+    main_data = pd.DataFrame([main_list],columns=["Name", "Last name", "Faculty", "Chosen from Cluster1", "Chosen from Cluster2", "Chosen from Cluster3", "Chosen from Cluster4", "Chosen from Cluster5", "Chosen from Cluster6"])
+
+    
     st.write("Thank you for your response! You can close this page now.")
+    
+    
+    st.write(main_data)
+
+       
+     
+     
+
+
 
 
 
