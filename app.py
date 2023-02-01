@@ -4,6 +4,17 @@ import streamlit as st
 from st_aggrid import AgGrid, GridUpdateMode, GridOptionsBuilder
 import requests
 
+from google.oauth2 import service_account
+from google.cloud import storage
+
+credentials = service_account.Credentials.from_service_account_info(st.secrets["gcp_service_account"])
+client = storage.Client(credentials=credentials)
+
+bucket_name = "cagri-ozmemis-streamlit"
+file_name = "answers.csv"
+
+bucket = client.bucket(bucket_name)
+blob = bucket.blob(file_name)
 
 
 st.title("HORIZON GRANT CALLS")
@@ -150,7 +161,7 @@ selected6 = grid_table6['selected_rows']
 df6 = pd.DataFrame(selected6)
 st.write(df6)
 st.write ("")
-
+########################
 
 
 if st.button('Submit my response'):
@@ -185,13 +196,19 @@ if st.button('Submit my response'):
     string_chosen = ",".join(str(e) for e in chosen)
     main_list.append(string_chosen)
     
-    main_data = pd.DataFrame([main_list],columns=["Name", "Last name", "Faculty", "Chosen from Cluster1", "Chosen from Cluster2", "Chosen from Cluster3", "Chosen from Cluster4", "Chosen from Cluster5", "Chosen from Cluster6"])
-
+    #main_data = pd.DataFrame([main_list],columns=["Name", "Last name", "Faculty", "Chosen from Cluster1", "Chosen from Cluster2", "Chosen from Cluster3", "Chosen from Cluster4", "Chosen from Cluster5", "Chosen from Cluster6"])
+    #st.write(main_data)
+    
+    write_to_cloud = " | ".join(main_list)
+    
+    blob.upload_from_string(write_to_cloud, content_type="text/csv")
+    
+    blob.upload_from_string("\n", content_type="text/csv")
     
     st.write("Thank you for your response! You can close this page now.")
     
     
-    st.write(main_data)
+    
 
        
      
